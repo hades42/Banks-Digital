@@ -2,3 +2,18 @@ $red: #ed1b24;
 $black: #111517;
 $white: #ffffff;
 $white-blur: #eeeeee;
+
+.mg-23 {
+  margin: 0 23rem;
+}
+.color-red {
+  color: $red;
+}
+
+%transform-text {
+  background-image: url(../assets/front-img/dust.jpg);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
