@@ -17,3 +17,28 @@ $white-blur: #eeeeee;
   -webkit-background-clip: text;
   color: transparent;
 }
+// .blur {
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   top: 0;
+//   // bottom: 2rem;
+//   // width: 300rem;
+//   // height: ;
+//   background-color: blue;
+// }
+%btn-redblack {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  border-radius: 0.3rem;
+  text-decoration: none;
+  color: $white;
+  background-color: $red;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  padding: 0.8rem 1.3rem;
+  box-shadow: 0 0.15rem 0.3rem rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease;
+}

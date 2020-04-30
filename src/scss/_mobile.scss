@@ -31,18 +31,19 @@
     margin-bottom: 2.5rem;
   }
   &__btn {
-    font-family: Helvetica, Arial, sans-serif;
-    font-weight: 600;
-    border-radius: 0.3rem;
-    text-decoration: none;
-    color: $white;
-    background-color: $red;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    padding: 0.8rem 1.3rem;
-    box-shadow: 0 0.15rem 0.3rem rgba(0, 0, 0, 0.4);
-    transition: all 0.2s ease;
+    @extend %btn-redblack;
+    // font-family: Helvetica, Arial, sans-serif;
+    // font-weight: 600;
+    // border-radius: 0.3rem;
+    // text-decoration: none;
+    // color: $white;
+    // background-color: $red;
+    // font-size: 1rem;
+    // text-transform: uppercase;
+    // letter-spacing: 0.1rem;
+    // padding: 0.8rem 1.3rem;
+    // box-shadow: 0 0.15rem 0.3rem rgba(0, 0, 0, 0.4);
+    // transition: all 0.2s ease;
     &:hover {
       background-color: $black;
     }

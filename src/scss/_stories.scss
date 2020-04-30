@@ -1,0 +1,77 @@
+.stories {
+  background-color: $black;
+  color: $white;
+  padding: 6rem 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1.5rem;
+  }
+  &__underline {
+    background-color: $red;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 7rem;
+    height: 0.25rem;
+    border-radius: 0.2rem;
+    margin-bottom: 3rem;
+  }
+  &__show {
+    // background-color: red;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+  &__article {
+    overflow: hidden;
+    position: relative;
+    border-radius: 0.5rem;
+    &-image {
+      width: 100%;
+      height: 100%;
+    }
+    &-content {
+      z-index: 100;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding-top: 4rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      padding-bottom: 2rem;
+      background: linear-gradient(
+        transparent,
+        rgba(17, 21, 23, 0.95)
+      ) !important;
+    }
+    &-title {
+      font-size: 1.6rem;
+      font-family: "Passion One", cursive;
+      letter-spacing: 0.2rem;
+      margin-bottom: 1rem;
+    }
+    &-des {
+      font-size: 1.2rem;
+      letter-spacing: 0.1rem;
+    }
+  }
+  &__btn {
+    @extend %btn-redblack;
+    &:hover {
+      background-color: white;
+      color: $black;
+    }
+  }
+}
