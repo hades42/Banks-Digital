@@ -1,5 +1,5 @@
 .brands {
-  margin-top: 7rem;
+  margin: 6rem 0;
   //   background-color: red;
 
   &-des {
@@ -58,6 +58,7 @@
     color: $red;
     font-size: 1.7rem;
     cursor: pointer;
+    padding: 0 1rem;
   }
   &__dots {
     display: flex;

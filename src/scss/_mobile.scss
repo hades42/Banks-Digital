@@ -1,0 +1,90 @@
+.mobile {
+  &__tag {
+    font-family: Helvetica, Arial, sans-serif;
+    color: $white;
+    background-color: $red;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.8rem;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    margin-bottom: 1.5rem;
+  }
+  &__par {
+    // font-family: Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    font-size: 2.8rem;
+    letter-spacing: 0.15rem;
+    line-height: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  &__underline {
+    background-color: $red;
+    width: 20%;
+    height: 0.25rem;
+    border-radius: 0.2rem;
+    margin-bottom: 1.5rem;
+  }
+  &__auth {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+  }
+  &__btn {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    border-radius: 0.3rem;
+    text-decoration: none;
+    color: $white;
+    background-color: $red;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    padding: 0.8rem 1.3rem;
+    box-shadow: 0 0.15rem 0.3rem rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease;
+    &:hover {
+      background-color: $black;
+    }
+  }
+  &__client {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    width: 50%;
+    height: 25rem;
+  }
+}
+
+.mobile-first {
+  //   height: 100%;
+  background-color: #ececec;
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+  }
+
+  &__image {
+    padding-left: 3rem;
+    width: 50%;
+  }
+}
+
+.mobile-second {
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+  }
+
+  &__image {
+    padding-right: 3rem;
+    width: 50%;
+  }
+}
