@@ -1,0 +1,84 @@
+.footer {
+  background-color: $black;
+  color: $white;
+  padding-bottom: 1.5rem;
+  a {
+    text-decoration: none;
+    color: $white;
+    transition: 0.2s;
+    &:hover {
+      color: $red;
+    }
+  }
+  &__container {
+    margin-bottom: 2.5rem;
+    padding: 5rem 0 2rem 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-size: 1.2rem;
+  }
+  &__contact {
+    &-icon {
+      width: 10rem;
+      margin-bottom: 2rem;
+    }
+    &-phone {
+      margin-bottom: 2rem;
+    }
+  }
+  &__location {
+    width: 25%;
+    &-title {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.7rem;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+  }
+
+  &__company {
+    &-title {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.7rem;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+    &-list {
+      li:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  &__resources {
+    &-title {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.7rem;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+    &-list {
+      li:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  &__rights {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-par {
+      font-size: 0.9rem;
+    }
+    &-list {
+      font-size: 0.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      li:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
