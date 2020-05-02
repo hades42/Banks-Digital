@@ -1,0 +1,47 @@
+.company {
+  background-color: $black;
+  &__container {
+    padding: 5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__des {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    width: 50%;
+    height: 25rem;
+    padding: 5rem 2rem 0 0;
+
+    &-title {
+      color: $white;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      // letter-spacing: 0.1rem;
+      margin-bottom: 1rem;
+    }
+    &-underline {
+      @extend %underline;
+    }
+    &-detail {
+      @extend %auth;
+      color: $white;
+    }
+    &-btn {
+      @extend %btn-redblack;
+      cursor: pointer;
+      &:hover {
+        background-color: $white;
+        color: $black;
+      }
+    }
+  }
+
+  &__image {
+    width: 45%;
+    margin-right: 2rem;
+  }
+}
