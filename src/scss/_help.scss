@@ -1,0 +1,42 @@
+.help {
+  margin: 5rem 0;
+  &__container {
+    // background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__title {
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1.5rem;
+  }
+  &__underline {
+    @extend %underline;
+    width: 10%;
+  }
+  &__block {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    &-btn {
+      font-size: 1.5rem;
+      background-color: $black;
+      color: $white;
+      padding: 1.2rem 8rem;
+      letter-spacing: 0.1rem;
+      cursor: pointer;
+      transition: 0.2s;
+      border-radius: 0.2rem;
+      &:hover {
+        background-color: $red;
+      }
+    }
+  }
+}

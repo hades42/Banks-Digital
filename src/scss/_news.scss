@@ -1,0 +1,83 @@
+.news {
+  background-color: #ececec;
+
+  &__container {
+    padding: 5rem 0;
+    // display: flex;
+    // flex-direction: column;
+  }
+  &__title {
+    text-align: center;
+    color: $black;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  &__underline {
+    @extend %underline;
+    display: block;
+    margin: 0 auto 2rem auto;
+    width: 9%;
+  }
+  &__cardshow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 33rem;
+  }
+
+  &__card {
+    position: relative;
+    width: 33.33%;
+    overflow: hidden;
+    background-color: $white;
+    height: 100%;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.04rem 0.06rem rgba(0, 0, 0, 0.1),
+      0 0.1rem 0.3rem rgba(0, 0, 0, 0.1);
+    transition: 0.2s;
+
+    &:hover {
+      box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.1),
+        0 1rem 1rem rgba(0, 0, 0, 0.1);
+    }
+    &:not(:last-child) {
+      margin-right: 2.5rem;
+    }
+    &-img {
+      width: 100%;
+    }
+
+    &-tag {
+      position: absolute;
+      background-color: $red;
+      top: 0;
+      right: 0;
+      color: $white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.8rem;
+      padding: 0.5rem 0.5rem;
+    }
+
+    &-content {
+      padding: 2rem 2rem;
+    }
+    &-date {
+      margin-bottom: 1rem;
+    }
+    &-title {
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 1.2rem;
+      font-weight: 900;
+      margin-bottom: 2rem;
+    }
+    &-btn {
+      @extend %btn-redblack;
+      &:hover {
+        background-color: $black;
+        color: $white;
+      }
+    }
+  }
+}
