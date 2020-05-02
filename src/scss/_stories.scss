@@ -42,7 +42,7 @@
       height: 100%;
     }
     &-content {
-      z-index: 100;
+      // z-index: ;
       position: absolute;
       left: 0;
       right: 0;
@@ -51,10 +51,7 @@
       padding-left: 1.5rem;
       padding-right: 1.5rem;
       padding-bottom: 2rem;
-      background: linear-gradient(
-        transparent,
-        rgba(17, 21, 23, 0.95)
-      ) !important;
+      background: linear-gradient(transparent, rgba(17, 21, 23, 0.95));
     }
     &-title {
       font-size: 1.6rem;

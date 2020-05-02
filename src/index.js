@@ -29,6 +29,8 @@ dropBtn.addEventListener("click", (e) => {
   }
 });
 
+// Brand Slider
+
 function updateCurrent(currentIndex) {
   slides[currentIndex].className = "brands__slider active";
   dots[currentIndex].className = "brands__dots-dot active";
@@ -64,3 +66,48 @@ dotsArr.forEach((el, index) => {
 });
 
 updateCurrent(currentSlider);
+
+// Slider for Testimonial
+let tesCurrentSlider = 0;
+// const tesSliders = document.querySelectorAll(".testimonial__slider");
+// const tesDots = document.querySelectorAll(".testimonial__dots-dot");
+const tesSliderArr = [...document.querySelectorAll(".testimonial__slider")];
+const tesDotsArr = [...document.querySelectorAll(".testimonial__dots-dot")];
+const tesNext = document.querySelector(".testimonial__next");
+const tesPrev = document.querySelector(".testimonial__prev");
+
+// console.log(tesSliderArr);
+function updateTesCurr(tesCurrentSlider) {
+  tesSliderArr[tesCurrentSlider].className = "testimonial__slider active";
+  tesDotsArr[tesCurrentSlider].className = "testimonial__dots-dot active";
+}
+
+tesPrev.addEventListener("click", () => {
+  tesSliderArr[tesCurrentSlider].className = "testimonial__slider right";
+  tesDotsArr[tesCurrentSlider].className = "testimonial__dots-dot";
+  tesCurrentSlider = tesCurrentSlider - 1;
+  if (tesCurrentSlider < 0) {
+    tesCurrentSlider = tesSliderArr.length - 1;
+  }
+  updateTesCurr(tesCurrentSlider);
+});
+// next btn
+tesNext.addEventListener("click", () => {
+  tesSliderArr[tesCurrentSlider].className = "testimonial__slider left";
+  tesDotsArr[tesCurrentSlider].className = "testimonial__dots-dot";
+  tesCurrentSlider = tesCurrentSlider + 1;
+  if (tesCurrentSlider > tesSliderArr.length - 1) {
+    tesCurrentSlider = 0;
+  }
+  updateTesCurr(tesCurrentSlider);
+});
+
+tesDotsArr.forEach((el, index) => {
+  el.addEventListener("click", () => {
+    tesDotsArr.forEach((el) => (el.className = "testimonial__dots-dot"));
+    tesSliderArr.forEach((el) => (el.className = "testimonial__slider"));
+    updateTesCurr(index);
+  });
+});
+
+updateTesCurr(currentSlider);
