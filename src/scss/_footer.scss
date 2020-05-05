@@ -25,10 +25,12 @@
       // justify-content: flex-start;
     }
   }
-  @include respond(tab-port) {
-    &__accordion {
-      // margin-bottom: 3rem;
+  &__headerwrap {
+    &-icon {
+      display: none;
     }
+  }
+  @include respond(tab-port) {
     &__contentwrap {
       max-height: 0;
       overflow: hidden;
@@ -46,6 +48,7 @@
         color: red;
       }
       &-icon {
+        display: block;
         transform: rotate(0);
         transition: transform 0.2s ease;
       }
@@ -119,7 +122,9 @@
       }
     }
     &-list {
-      padding: 2rem 0 2rem 2rem;
+      @include respond(tab-port) {
+        padding: 2rem 0 2rem 2rem;
+      }
       li:not(:last-child) {
         margin-bottom: 1rem;
       }
@@ -151,8 +156,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include respond(tab-port) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-bottom: 0.5rem;
+    }
     &-par {
       font-size: 0.9rem;
+      @include respond(tab-port) {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
     }
     &-list {
       font-size: 0.7rem;

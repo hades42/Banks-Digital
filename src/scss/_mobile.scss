@@ -33,6 +33,9 @@
     justify-content: start;
     width: 50%;
     // height: 25rem;
+    @include respond(tab-port) {
+      width: 100%;
+    }
   }
 }
 
@@ -45,11 +48,18 @@
     justify-content: center;
     align-items: center;
     padding: 4rem 0;
+    @include respond(tab-port) {
+      flex-direction: column;
+      // padding: 0;
+    }
   }
 
   &__image {
     padding-left: 3rem;
     width: 50%;
+    @include respond(tab-port) {
+      width: 100%;
+    }
   }
 }
 
@@ -61,10 +71,17 @@
     justify-content: center;
     align-items: center;
     padding: 4rem 0;
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
   }
 
   &__image {
     padding-right: 3rem;
     width: 50%;
+    @include respond(tab-port) {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
   }
 }

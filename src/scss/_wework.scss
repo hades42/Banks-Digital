@@ -5,6 +5,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
   }
   &__des {
     display: flex;
@@ -14,6 +17,9 @@
     width: 50%;
     height: 25rem;
     padding: 5rem 2rem 0 0;
+    @include respond(tab-port) {
+      width: 100%;
+    }
 
     &-title {
       color: $white;
@@ -43,5 +49,8 @@
   &__image {
     width: 45%;
     margin-right: 2rem;
+    @include respond(tab-port) {
+      width: 100%;
+    }
   }
 }

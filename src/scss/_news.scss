@@ -35,6 +35,9 @@
       // column-gap: 2rem;
       row-gap: 2rem;
     }
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__card {
