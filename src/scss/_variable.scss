@@ -4,7 +4,16 @@ $white: #ffffff;
 $white-blur: #eeeeee;
 
 .mg-23 {
-  margin: 0 23rem;
+  margin: 0 15%;
+  @include respond(nor-desktop) {
+    margin: 0 8%;
+  }
+  @include respond(tab-port) {
+    margin: 0 3%;
+  }
+}
+.max-width {
+  max-width: 80rem;
 }
 .color-red {
   color: $red;
@@ -49,6 +58,10 @@ $white-blur: #eeeeee;
   letter-spacing: 0.15rem;
   line-height: 3rem;
   margin-bottom: 1.5rem;
+  @include respond(nor-desktop) {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+  }
 }
 
 %underline {

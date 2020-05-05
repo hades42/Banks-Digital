@@ -32,14 +32,14 @@
     align-items: flex-start;
     justify-content: start;
     width: 50%;
-    height: 25rem;
+    // height: 25rem;
   }
 }
 
 .mobile-first {
-  //   height: 100%;
   background-color: #ececec;
   &__container {
+    // padding-bottom: 4rem;
     position: relative;
     display: flex;
     justify-content: center;
@@ -54,6 +54,7 @@
 }
 
 .mobile-second {
+  // padding-top: 5rem;
   &__container {
     position: relative;
     display: flex;

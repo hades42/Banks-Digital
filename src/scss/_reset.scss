@@ -90,9 +90,13 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: 62.5%;
   font: inherit;
   vertical-align: baseline;
+
+  // @media only screen and (max-width: 1200px) {
+  //   font-size: 62.5%;
+  // }
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -113,6 +117,7 @@ body {
   font-family: "Dosis", sans-serif;
   position: relative;
   // font-family: "FSSinclairWeb-Medium", Helvetica, Arial, sans-serif;
+  // max-width: 100rem;
 }
 ol,
 ul {

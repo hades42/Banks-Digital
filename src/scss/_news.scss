@@ -21,15 +21,36 @@
     width: 9%;
   }
   &__cardshow {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 33rem;
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    // height: 33rem;
+    @include respond(tab-port) {
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+      // gap: 1rem;
+      // column-gap: 2rem;
+      row-gap: 2rem;
+    }
   }
 
   &__card {
+    @include respond(tab-port) {
+      &:last-child {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        // overflow: hidden;
+        // &-img {
+        //   width: 0%;
+        // }
+      }
+    }
+
     position: relative;
-    width: 33.33%;
+    // width: 33.33%;
     overflow: hidden;
     background-color: $white;
     height: 100%;
@@ -42,9 +63,9 @@
       box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.1),
         0 1rem 1rem rgba(0, 0, 0, 0.1);
     }
-    &:not(:last-child) {
-      margin-right: 2.5rem;
-    }
+    // &:not(:last-child) {
+    //   margin-right: 2.5rem;
+    // }
     &-img {
       width: 100%;
     }
@@ -61,7 +82,10 @@
     }
 
     &-content {
-      padding: 2rem 2rem;
+      padding: 2rem 1rem 8rem 2rem;
+      @include respond(tab-port) {
+        padding: 2rem 1rem 3rem 2rem;
+      }
     }
     &-date {
       margin-bottom: 1rem;

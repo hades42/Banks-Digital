@@ -1,0 +1,31 @@
+// .html {
+//   font-size: 15%;
+// }
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      @content;
+    } // 600px
+  }
+  @if $breakpoint == tab-port {
+    @media (max-width: 57.75em) {
+      @content;
+    } //924px
+  }
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) {
+      @content;
+    } //1200px
+  }
+  @if $breakpoint == nor-desktop {
+    @media (max-width: 93.75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    @media (max-width: 112.5em) {
+      @content;
+    } //1800px
+  }
+}

@@ -6,6 +6,9 @@
   position: fixed;
   z-index: 100;
   font-family: "FSSinclairWeb-Medium", Helvetica, Arial, sans-serif;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
   &__container {
     // margin: 0 23rem;
     // padding: 2rem 0;
@@ -26,7 +29,7 @@
     justify-content: center;
 
     li {
-      position: relative;
+      // position: relative;
       padding: 0.7rem 1.5rem;
       border-bottom: 0.2rem solid $black;
       transition: all 0.3s ease-in-out;
@@ -44,6 +47,9 @@
 
     &--dropdown {
       margin-left: 0.7rem;
+    }
+    @include respond(tab-land) {
+      display: none;
     }
   }
   &__contact {
@@ -70,14 +76,18 @@
         color: $black;
       }
     }
+    @include respond(tab-land) {
+      margin-left: auto;
+    }
   }
 
   &__drop {
     position: absolute;
     z-index: 100;
-    // width: 100%;
+    width: 100%;
     &-list {
-      margin: 0 23rem;
+      // width: 100%;
+      // margin: 0 23rem;
       background-color: $white-blur;
       display: flex;
       opacity: 0;
@@ -118,6 +128,24 @@
         text-decoration: none;
         transition: all 0.2s ease-out;
       }
+    }
+  }
+  &__hamburger {
+    display: none;
+    &-line {
+      @include respond(tab-land) {
+        width: 2.3rem;
+        height: 0.2rem;
+        background-color: $white;
+        &:not(:last-child) {
+          margin-bottom: 0.3rem;
+        }
+      }
+    }
+    @include respond(tab-land) {
+      display: flex;
+      flex-direction: column;
+      margin-left: 2rem;
     }
   }
 }

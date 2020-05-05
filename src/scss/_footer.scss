@@ -17,8 +17,47 @@
     align-items: flex-start;
     justify-content: space-between;
     font-size: 1.2rem;
+    @include respond(tab-port) {
+      flex-direction: column;
+      padding: 2rem 0 2rem 0;
+      margin-bottom: 0;
+      // align-items: flex-start;
+      // justify-content: flex-start;
+    }
+  }
+  @include respond(tab-port) {
+    &__accordion {
+      // margin-bottom: 3rem;
+    }
+    &__contentwrap {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+    &__headerwrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      // margin-bottom: 3rem;
+      padding: 1.2rem;
+      cursor: pointer;
+
+      &.active {
+        color: red;
+      }
+      &-icon {
+        transform: rotate(0);
+        transition: transform 0.2s ease;
+      }
+      &-icon.active {
+        transform: rotate(-180deg);
+      }
+    }
   }
   &__contact {
+    @include respond(tab-port) {
+      display: none;
+    }
     &-icon {
       width: 10rem;
       margin-bottom: 2rem;
@@ -28,36 +67,80 @@
     }
   }
   &__location {
+    &-btn {
+      display: none;
+    }
+
+    @include respond(tab-port) {
+      width: 100%;
+      &-detail {
+        padding: 2rem 0 2rem 2rem;
+      }
+      &-btn {
+        font-family: Helvetica, Arial, sans-serif;
+        display: inline-block;
+        color: $white;
+        background-color: $red;
+        font-size: 1rem;
+        text-transform: uppercase;
+        padding: 0.7rem 1rem;
+        border-radius: 0.2rem;
+        font-weight: bolder;
+      }
+      &-par {
+        margin-bottom: 2rem;
+      }
+    }
     width: 25%;
     &-title {
       font-family: Arial, Helvetica, sans-serif;
       font-size: 1.7rem;
       margin-bottom: 1.5rem;
       font-weight: 600;
+      @include respond(tab-port) {
+        margin: 0;
+        font-size: 1.3rem;
+      }
     }
   }
 
   &__company {
+    @include respond(tab-port) {
+      width: 100%;
+    }
     &-title {
       font-family: Arial, Helvetica, sans-serif;
       font-size: 1.7rem;
       margin-bottom: 1.5rem;
       font-weight: 600;
+      @include respond(tab-port) {
+        margin: 0;
+        font-size: 1.3rem;
+      }
     }
     &-list {
+      padding: 2rem 0 2rem 2rem;
       li:not(:last-child) {
         margin-bottom: 1rem;
       }
     }
   }
   &__resources {
+    @include respond(tab-port) {
+      width: 100%;
+    }
     &-title {
       font-family: Arial, Helvetica, sans-serif;
       font-size: 1.7rem;
       margin-bottom: 1.5rem;
       font-weight: 600;
+      @include respond(tab-port) {
+        margin: 0;
+        font-size: 1.3rem;
+      }
     }
     &-list {
+      padding: 2rem 0 2rem 2rem;
       li:not(:last-child) {
         margin-bottom: 1rem;
       }

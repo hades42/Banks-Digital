@@ -1,13 +1,16 @@
 .section {
   // position: relative;
-  padding-top: 8rem;
+  padding: 8rem 0 5rem 0;
   background: url(../assets/front-img/blackred.jpg) no-repeat center center
     fixed;
   background-size: cover;
   color: $white-blur;
-  height: 100vh;
+  height: 63rem;
   font-size: 1.3rem;
-
+  @include respond(tab-land) {
+    font-size: 1rem;
+    height: 59rem;
+  }
   &__intro {
     display: flex;
     flex-direction: column;
@@ -24,6 +27,9 @@
       line-height: 0.85;
       letter-spacing: 1.5rem;
       margin-bottom: 2.7rem;
+      @include respond(tab-land) {
+        font-size: 7rem;
+      }
     }
     &-explain {
       @extend %transform-text;

@@ -111,3 +111,47 @@ tesDotsArr.forEach((el, index) => {
 });
 
 updateTesCurr(currentSlider);
+
+// Popup container
+const hamburgerBar = document.querySelector(".header__hamburger");
+const popUp = document.querySelector(".popup");
+const closePopUp = document.querySelector(".popup__container-close");
+
+hamburgerBar.addEventListener("click", () => {
+  popUp.className = "popup active";
+});
+
+closePopUp.addEventListener("click", () => {
+  popUp.classList.remove("active");
+});
+
+// Accordion Scroll Effect
+const accordionHeaders = document.querySelectorAll(".footer__headerwrap");
+
+accordionHeaders.forEach((headerItem) => {
+  headerItem.addEventListener("click", (e) => {
+    if (!headerItem.classList.contains("active")) {
+      removeAllActive();
+    }
+    headerItem.classList.toggle("active");
+    headerItem.childNodes[3].classList.toggle("active");
+
+    const body = headerItem.nextElementSibling;
+    if (headerItem.classList.contains("active")) {
+      body.style.maxHeight = body.scrollHeight + "px";
+    } else {
+      body.style.maxHeight = 0;
+    }
+  });
+});
+
+// Remove active accordion
+function removeAllActive() {
+  accordionHeaders.forEach((headerItem) => {
+    headerItem.classList.remove("active");
+    headerItem.childNodes[3].classList.remove("active");
+
+    const body = headerItem.nextElementSibling;
+    body.style.maxHeight = 0;
+  });
+}

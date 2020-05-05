@@ -32,6 +32,10 @@
     grid-template-rows: repeat(2, 1fr);
     gap: 3rem;
     margin-bottom: 3rem;
+    @include respond(tab-port) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
   }
   &__article {
     overflow: hidden;
