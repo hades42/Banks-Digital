@@ -11,7 +11,6 @@
   opacity: 0;
   transform: scale(0.2);
   transition: all 0.3s ease-out;
-  //   animation: popOut 0.3s ease-out;
   pointer-events: none;
 
   &.active {
@@ -33,7 +32,6 @@
       margin-bottom: 2rem;
     }
     li {
-      //   cursor: pointer;
       &:not(:last-child) {
         margin-bottom: 2.2rem;
       }
@@ -48,12 +46,10 @@
 }
 
 @keyframes popOut {
-  form {
+  from {
     transform: scale(0.2);
-    // color: white;
   }
   to {
     transform: scale(1);
-    // color: red;
   }
 }
